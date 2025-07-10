@@ -47,6 +47,16 @@ for quiz_num in range(35):
         answer_options = wrong_answers + [correct_answer]
         random.shuffle(answer_options)
 
-        # TODO: Write the question and answer options to the quiz file.
+        # Loop through all 50 states, making a question for each.
+
+        quiz_file.write(f'{num + 1}. Capital of {states[num]}:\n')
+        for i in range(4):
+            quiz_file.write(f"  {'ABCD'[i]}.{answer_options[i]}\n")
+        quiz_file.write('\n')
+
+        answer_file.write(f"{num + 1}.{'ABCD'[answer_options.index(correct_answer)]}")
+    
+    quiz_file.close()
+    answer_file.close()
 
         # TODO: Write the answer key to a file.
