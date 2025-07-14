@@ -1,10 +1,3 @@
-# TODO: Write the text file and save it.
-# TODO: Read the file
-# TODO: Find all instances of adjective, noun, adverb or verb
-# TODO: Save to variables
-# TODO: Prompt user to enter text for each
-# TODO: Save to variables
-
 import re
 
 def set_text_variable(text):
