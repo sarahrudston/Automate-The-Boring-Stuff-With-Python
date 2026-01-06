@@ -25,34 +25,34 @@
 *You can right-click any part of the web page and select Inspect Element from the context menu to bring up the HTML responsible for that page in the Developer Tools.*
 
 9. What CSS selector string would find the element with an id attribute of `main`?<br>
-**
+*You can retrieve a web page element from a BeautifulSoup object by calling `select()` and passing a selector string for the element you're looking for. For example `soup.select('#main')`.*
 
 10. What CSS selector string would find the elements with an id attribute of highlight?<br>
-**
+*`soup.select('highlight')`*
 
-11. Say you have a Beautiful Soup Tag object stored in the variable spam for the element <div>Hello, world!</div>. How could you get a string 'Hello, world!' from the Tag object?
-**
+11. Say you have a Beautiful Soup Tag object stored in the variable `spam` for the element <div>Hello, world!</div>. How could you get a string 'Hello, world!' from the Tag object?<br>
+*You can pass the variable to the str() function to show the contents as a string. For example, `str(spam)`. If you want to then show the actual text, you can use `spam.get_text()` which will return 'Hello, world!'*
 
-12. How would you store all the attributes of a Beautiful Soup Tag object in a variable named link_elem?
-**
+12. How would you store all the attributes of a Beautiful Soup Tag object in a variable named `link_elem`?<br>
+*The `attrs` attribute contains all the variables attributes as a dictionary. Therefore you should pass `link_elem.attrs` to a variable.*
 
-13. Running import selenium doesn't work. How do you properly import Selenium?
-**
+13. Running `import selenium` doesn't work. How do you properly import Selenium?<br>
+*You have to run `selenium import webdriver`.*
 
-14. What's the difference between the find_element() and find_elements() methods in Selenium?
-**
+14. What's the difference between the find_element() and find_elements() methods in Selenium?<br>
+*`find_element()` finds a single `WebElement` object, which is the first element on the page that matches the query. `find_elements()` returns a list of `WebElement` objects for every matching element. *
 
-15. What methods do Selenium's WebElement objects have for simulating mouse clicks and keyboard keys?
-**
+15. What methods do Selenium's WebElement objects have for simulating mouse clicks and keyboard keys?<br>
+*The `click()` method simulates a mouse click on that element. The `send_keys()` method allows the user to send keystrokes to text fields on the page.*
 
-16. In Playwright, what locator method call simulates pressing CTRL-A to select all the text on the page?
-**
+16. In Playwright, what locator method call simulates pressing CTRL-A to select all the text on the page?<br>
+*Key presses can be simulated in Playwright using the `press()` method on Locator objects. You can pass 'Control+A' for CTRL-A to select all text on the page.*
 
-17. How can you simulate clicking a browser's Forward, Back, and Refresh buttons with Selenium?
-**
+17. How can you simulate clicking a browser's Forward, Back, and Refresh buttons with Selenium?<br>
+*Selenium can simulate clicks on various browser buttons through `browser.back()`, `browser.forward()` and `browser.refresh()`.*
 
-18. How can you simulate clicking a browser's Forward, Back, and Refresh buttons with Playwright?
-**
+18. How can you simulate clicking a browser's Forward, Back, and Refresh buttons with Playwright?<br>
+*Playwright can simulate clicking the browser buttons by calling the following `Page` methods on the `Page` object returned by `browser.new_page()`: `page.go_back()`, `page.go_forward()`, `page.reload()`.*
 
 
 
